@@ -1,0 +1,87 @@
+@media (max-width: 850px){
+
+    .logoImage{
+        width:30%;
+      }
+  
+  .container.active .main {
+    animation: main-animation 0.5s ease;
+    cursor: pointer;
+    transform: perspective(1300px) rotateY(5deg) translateZ(310px) scale(0.3);
+  }
+  
+  @keyframes main-animation {
+    from {
+      transform: translate(0);
+    }
+  
+    to {
+      transform: perspective(1300px) rotateY(5deg) translateZ(310px) scale(0.3);
+    }
+  }
+
+    .shadowOne{
+        display: none;
+    }
+    .shadowTwo{
+        display: none;
+    }
+
+
+
+    .links a {
+       
+        text-decoration: none;
+        color: #eee;
+        padding: 2rem 0;
+        display: inline-block;
+        font-size: 1rem;
+        font-weight: 200;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: 0.3s;
+        opacity: 0;
+        transform: translateY(10px);
+        animation: hide 0.5s forwards ease;
+      }
+      
+      .links a:hover {
+        color: #fff;
+      }
+      
+      .container.active .links a {
+        animation: appear 0.3s forwards ease var(--i);
+      }
+      
+      @keyframes appear {
+        from {
+          opacity: 0;
+          transform: translateY(100px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0px);
+        }
+      }
+      
+      @keyframes hide {
+        from {
+          opacity: 1;
+          transform: translateY(0px);
+        }
+        to {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+      }
+
+}
+
+@media (max-width: 440px){
+    
+        .inner__h1{
+            font-size: 2rem;
+            transition: 0.5s;
+          }
+   
+}
